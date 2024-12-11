@@ -58,7 +58,7 @@
                 resultDiv.innerHTML = `<p><strong>Horóscopo (${sign}):</strong> ${data.description}</p>`;
             } catch (error) {
                 console.error('Erro ao buscar dados:', error);
-                document.getElementById('result').innerText = 'Ocorreu um erro ao buscar o horóscopo.';
+                document.getElementById('result').innerText = 'Ocorreu um erro ao buscar o horóscopo. Verifique sua conexão com a internet e tente novamente.';
             }
         }
     </script>
