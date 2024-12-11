@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Histórias Loucas de Bar - Euques</title>
+    <title>Histórias Loucas de Bar</title>
     <style>
         body, html {
             margin: 0;
@@ -52,11 +52,11 @@
             border-radius: 5px;
         }
 
-        #story p {
+        #stories p {
             margin: 10px 0;
         }
 
-        #story strong {
+        #stories strong {
             font-weight: bold;
         }
     </style>
@@ -68,15 +68,28 @@
         </header>
 
         <main class="app-main">
-            <div class="story-container">
-                <h2>Uma história engraçada de "Loucos Bar":</h2>
-                <div id="story">
-                    <p>Era uma noite de sexta-feira e Euques estava no bar relaxando. De repente, o garçom tropeça na caneca e derruba cerveja nele! "E aí, Euques", diz o garçom, "parece que você está tentando entrar na lista das melhores histórias de bar!"</p>
-                    <p>Logo, todos começaram a compartilhar suas próprias loucuras. Uma dessas histórias envolvia Euques dançando 'Despacito' no palco, completamente fora do ritmo. "Não me pergunte como eu consegui isso", ele diz, rindo.</p>
+            <div class="story-container" id="stories">
+                <h2>As Piadas:</h2>
+
+                <div class="story">
+                    <p><strong>História 1:</strong></p>
                     <blockquote>
-                        "E claro, a noite terminou com Euques, todo "ele", tentando fazer o moonwalk e caindo de cara no chão. O bar inteiro não parava de rir!"
+                        "Era uma vez Euques, que resolveu fazer o moonwalk no meio do bar. O pessoal achou que era performance artística, mas na verdade ele só estava bêbado demais para dançar direito!"
                     </blockquote>
-                    <p>Ah, essas noites de 'Loucos Bar' nunca decepcionam!</p>
+                </div>
+
+                <div class="story">
+                    <p><strong>História 2:</strong></p>
+                    <blockquote>
+                        "Numa noite de karaokê, Euques pegou o microfone e começou a cantar 'Trem das Onze' de Adoniran Barbosa, mas totalmente desafinado. O bar todo caiu na risada!"
+                    </blockquote>
+                </div>
+
+                <div class="story">
+                    <p><strong>História 3:</strong></p>
+                    <blockquote>
+                        "E quem disse que só homem pode ir ao bar? Euques, todo 'ele', tentou competir num concurso de dança e, claro, saiu fazendo o moonwalk totalmente errado. Virou a piada do dia!"
+                    </blockquote>
                 </div>
             </div>
         </main>
@@ -86,16 +99,16 @@
         document.addEventListener('DOMContentLoaded', () => {
             // Lista de histórias engraçadas
             const stories = [
-                "Euques estava no bar quando, de repente, um saxofonista bêbado começou a tocar 'Despacito' na sua frente.",
-                "Uma noite, Euques tentou competir em um concurso de dança no meio do bar e acabou fazendo o moonwalk todo errado.",
-                "Em outra ocasião, ele pegou um microfone emprestado e começou a cantar 'Trem das Onze' de Adoniran Barbosa, totalmente fora de tom."
+                "Era uma vez Euques, que resolveu fazer o moonwalk no meio do bar. O pessoal achou que era performance artística, mas na verdade ele só estava bêbado demais para dançar direito!",
+                "Numa noite de karaokê, Euques pegou o microfone e começou a cantar 'Trem das Onze' de Adoniran Barbosa, mas totalmente desafinado. O bar todo caiu na risada!",
+                "E quem disse que só homem pode ir ao bar? Euques, todo 'ele', tentou competir num concurso de dança e, claro, saiu fazendo o moonwalk totalmente errado. Virou a piada do dia!"
             ];
 
             // Sorteia uma história aleatória
             const randomStory = stories[Math.floor(Math.random() * stories.length)];
 
             // Aplica a história no HTML
-            document.getElementById('story').querySelector('blockquote').innerText = randomStory;
+            document.getElementById('stories').querySelector('blockquote').innerText = randomStory;
         });
     </script>
 </body>
