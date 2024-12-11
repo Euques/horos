@@ -1,0 +1,64 @@
+{
+    "horoscopes": {
+        "aries": [
+            "Hoje é um bom dia para explorar novas oportunidades.",
+            "Cuidado com decisões impulsivas, reflita antes de agir.",
+            "Uma conversa importante pode surgir hoje, esteja preparado para isso."
+        ],
+        "taurus": [
+            "Você pode se sentir mais energético hoje, aproveite para se envolver em atividades físicas.",
+            "Cuidado com disputas de poder no trabalho, mantenha a calma.",
+            "Uma oportunidade financeira pode surgir, fique atento."
+        ],
+        "gemini": [
+            "Evite discussões acaloradas e procure manter a calma.",
+            "Hoje é um dia para se conectar com pessoas próximas.",
+            "Uma nova ideia pode surgir, aproveite para explorar novas possibilidades."
+        ],
+        "cancer": [
+            "Você pode sentir um desejo de se afastar e refletir.",
+            "Cuidado com decisões baseadas em emoções, procure pensar racionalmente.",
+            "Momento positivo para resolver pendências familiares."
+        ],
+        "leo": [
+            "Hoje é um bom dia para expressar seus sentimentos.",
+            "Cuidado com gastos excessivos, controle suas finanças.",
+            "Uma oportunidade social pode surgir, aproveite para se conectar."
+        ],
+        "virgo": [
+            "Você pode se sentir mais organizado e focado.",
+            "Cuidado com críticas, procure ser mais flexível.",
+            "Uma conversa importante pode surgir, esteja preparado para isso."
+        ],
+        "libra": [
+            "Momento positivo para equilibrar sua vida pessoal e profissional.",
+            "Cuidado com conflitos no trabalho, mantenha a calma.",
+            "Uma nova amizade pode surgir hoje."
+        ],
+        "scorpio": [
+            "Você pode sentir uma necessidade de intensidade emocional.",
+            "Cuidado com ciúmes, procure manter a confiança.",
+            "Momento positivo para investir em projetos pessoais."
+        ],
+        "sagittarius": [
+            "Hoje é um dia para explorar novas oportunidades.",
+            "Cuidado com decisões impulsivas, reflita antes de agir.",
+            "Uma viagem inesperada pode surgir, esteja aberto a isso."
+        ],
+        "capricorn": [
+            "Você pode sentir um desejo de se afastar e refletir.",
+            "Cuidado com excessos emocionais, procure manter a calma.",
+            "Momento positivo para focar em seus objetivos de longo prazo."
+        ],
+        "aquarius": [
+            "Hoje é um bom dia para explorar novas ideias.",
+            "Cuidado com discussões acaloradas, procure manter a calma.",
+            "Uma nova oportunidade social pode surgir, esteja aberto a isso."
+        ],
+        "pisces": [
+            "Você pode se sentir mais sensível e introspectivo.",
+            "Cuidado com decisões baseadas apenas em emoções.",
+            "Uma oportunidade financeira pode surgir, fique atento."
+        ]
+    }
+}
