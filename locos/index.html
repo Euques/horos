@@ -10,7 +10,7 @@
             padding: 0;
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
-            color: #333;
+            color: #000;
         }
 
         .app-container {
@@ -28,6 +28,18 @@
             background-color: #e2c2a5;
             color: #000;
             border-radius: 8px 8px 0 0;
+            position: relative;
+        }
+
+        .app-header img {
+            width: 80%; /* Ajuste a largura para 80% da largura da tela */
+            max-width: 150px; /* Limite a largura máxima da imagem */
+            height: auto; /* Mantém a proporção da imagem */
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
         .app-main {
@@ -64,6 +76,7 @@
 <body>
     <div class="app-container">
         <header class="app-header">
+            <img src="locos.png" alt="Imagem Cabeçalho">
             <h1>Histórias Loucas de Bar</h1>
         </header>
 
