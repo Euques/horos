@@ -72,23 +72,9 @@
                 <h2>As Piadas:</h2>
 
                 <div class="story">
-                    <p><strong>História 1:</strong></p>
-                    <blockquote>
-                        "Era uma vez Euques, que resolveu fazer o moonwalk no meio do bar. O pessoal achou que era performance artística, mas na verdade ele só estava bêbado demais para dançar direito!"
-                    </blockquote>
-                </div>
-
-                <div class="story">
-                    <p><strong>História 2:</strong></p>
-                    <blockquote>
-                        "Numa noite de karaokê, Euques pegou o microfone e começou a cantar 'Trem das Onze' de Adoniran Barbosa, mas totalmente desafinado. O bar todo caiu na risada!"
-                    </blockquote>
-                </div>
-
-                <div class="story">
-                    <p><strong>História 3:</strong></p>
-                    <blockquote>
-                        "E quem disse que só homem pode ir ao bar? Euques, todo 'ele', tentou competir num concurso de dança e, claro, saiu fazendo o moonwalk totalmente errado. Virou a piada do dia!"
+                    <p><strong>História:</strong></p>
+                    <blockquote id="randomStory">
+                        <!-- A história será inserida aqui pelo JavaScript -->
                     </blockquote>
                 </div>
             </div>
@@ -108,7 +94,7 @@
             const randomStory = stories[Math.floor(Math.random() * stories.length)];
 
             // Aplica a história no HTML
-            document.getElementById('stories').querySelector('blockquote').innerText = randomStory;
+            document.getElementById('randomStory').innerText = randomStory;
         });
     </script>
 </body>
