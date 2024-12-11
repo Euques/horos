@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horóscopo e Tempo</title>
+</head>
+<body>
+    <h1>Horóscopo e Previsão do Tempo</h1>
+
+    <div>
+        <label for="sign">Escolha o seu signo:</label>
+        <select id="sign">
+            <option value="aries">Áries</option>
+            <option value="taurus">Touro</option>
+            <option value="gemini">Gêmeos</option>
+            <option value="cancer">Câncer</option>
+            <option value="leo">Leão</option>
+            <option value="virgo">Virgem</option>
+            <option value="libra">Libra</option>
+            <option value="scorpio">Escorpião</option>
+            <option value="sagittarius">Sagitário</option>
+            <option value="capricorn">Capricórnio</option>
+            <option value="aquarius">Aquário</option>
+            <option value="pisces">Peixes</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="city">Digite sua cidade:</label>
+        <input type="text" id="city" placeholder="Ex: São Paulo">
+    </div>
+
+    <button onclick="fetchData()">Buscar</button>
+
+    <h2>Resultado:</h2>
+    <div id="result"></div>
+
+    <script>
+        async function fetchData() {
+            const sign = document.getElementById('sign').value;
+            const city = document.getElementById('city').value;
+
+            // Substitua pelas suas chaves e URLs reais
+            const horoscopeUrl = `https://ohmanda.com/api/horoscope/${sign}`;
+            const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=YOUR_API_KEY&units=metric`;
+
+            try {
+                const [horoscopeResponse, weatherResponse] = await Promise.all([
+                    fetch(horoscopeUrl),
+                    fetch(weatherUrl)
+                ]);
+
+                if (!horoscopeResponse.ok || !weatherResponse.ok) {
+                    throw new Error('Erro na requisição das APIs');
+                }
+
+                const horoscopeData = await horoscopeResponse.json();
+                const weatherData = await weatherResponse.json();
+
+                // Renderizando os resultados
+                const resultDiv = document.getElementById('result');
+                resultDiv.innerHTML = `
+                    <p><strong>Horóscopo (${sign}):</strong> ${horoscopeData.horoscope}</p>
+                    <p><strong>Tempo em ${city}:</strong> ${weatherData.weather[0].description}, ${weatherData.main.temp}°C</p>
+                `;
+            } catch (error) {
+                console.error('Erro ao buscar dados:', error);
+                document.getElementById('result').innerText = 'Ocorreu um erro ao buscar os dados. Verifique os valores inseridos.';
+            }
+        }
+    </script>
+</body>
+</html>
