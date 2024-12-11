@@ -35,11 +35,13 @@
         async function fetchHoroscope() {
             const sign = document.getElementById('sign').value;
 
-            // Substitua pela URL da API real
-            const horoscopeUrl = `http://ohmanda.com/api/horoscope/${sign}`;
+            // Nova API com HTTPS
+            const horoscopeUrl = `https://aztro.sameerkumar.website/?sign=${sign}&day=today`;
 
             try {
-                const response = await fetch(horoscopeUrl);
+                const response = await fetch(horoscopeUrl, {
+                    method: 'POST'
+                });
                 if (!response.ok) {
                     throw new Error('Erro ao buscar o horóscopo');
                 }
@@ -48,7 +50,7 @@
 
                 // Exibindo o horóscopo
                 const resultDiv = document.getElementById('result');
-                resultDiv.innerHTML = `<p><strong>Horóscopo (${sign}):</strong> ${data.horoscope}</p>`;
+                resultDiv.innerHTML = `<p><strong>Horóscopo (${sign}):</strong> ${data.description}</p>`;
             } catch (error) {
                 console.error('Erro ao buscar dados:', error);
                 document.getElementById('result').innerText = 'Ocorreu um erro ao buscar o horóscopo.';
