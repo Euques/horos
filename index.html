@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horóscopo e Tempo</title>
+    <title>Horóscopo</title>
 </head>
 <body>
-    <h1>Horóscopo e Previsão do Tempo</h1>
+    <h1>Horóscopo do Dia</h1>
 
     <div>
         <label for="sign">Escolha o seu signo:</label>
@@ -26,47 +26,32 @@
         </select>
     </div>
 
-    <div>
-        <label for="city">Digite sua cidade:</label>
-        <input type="text" id="city" placeholder="Ex: São Paulo">
-    </div>
-
-    <button onclick="fetchData()">Buscar</button>
+    <button onclick="fetchHoroscope()">Ver Horóscopo</button>
 
     <h2>Resultado:</h2>
     <div id="result"></div>
 
     <script>
-        async function fetchData() {
+        async function fetchHoroscope() {
             const sign = document.getElementById('sign').value;
-            const city = document.getElementById('city').value;
 
-            // Substitua pelas suas chaves e URLs reais
+            // Substitua pela URL da API real
             const horoscopeUrl = `https://ohmanda.com/api/horoscope/${sign}`;
-            const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=YOUR_API_KEY&units=metric`;
 
             try {
-                const [horoscopeResponse, weatherResponse] = await Promise.all([
-                    fetch(horoscopeUrl),
-                    fetch(weatherUrl)
-                ]);
-
-                if (!horoscopeResponse.ok || !weatherResponse.ok) {
-                    throw new Error('Erro na requisição das APIs');
+                const response = await fetch(horoscopeUrl);
+                if (!response.ok) {
+                    throw new Error('Erro ao buscar o horóscopo');
                 }
 
-                const horoscopeData = await horoscopeResponse.json();
-                const weatherData = await weatherResponse.json();
+                const data = await response.json();
 
-                // Renderizando os resultados
+                // Exibindo o horóscopo
                 const resultDiv = document.getElementById('result');
-                resultDiv.innerHTML = `
-                    <p><strong>Horóscopo (${sign}):</strong> ${horoscopeData.horoscope}</p>
-                    <p><strong>Tempo em ${city}:</strong> ${weatherData.weather[0].description}, ${weatherData.main.temp}°C</p>
-                `;
+                resultDiv.innerHTML = `<p><strong>Horóscopo (${sign}):</strong> ${data.horoscope}</p>`;
             } catch (error) {
                 console.error('Erro ao buscar dados:', error);
-                document.getElementById('result').innerText = 'Ocorreu um erro ao buscar os dados. Verifique os valores inseridos.';
+                document.getElementById('result').innerText = 'Ocorreu um erro ao buscar o horóscopo.';
             }
         }
     </script>
