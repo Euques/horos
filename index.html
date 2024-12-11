@@ -52,10 +52,7 @@
                 }
 
                 const data = await response.json();
-
-                // Exibindo o horóscopo
-                const resultDiv = document.getElementById('result');
-                resultDiv.innerHTML = `<p><strong>Horóscopo (${sign}):</strong> ${data.description}</p>`;
+                document.getElementById('result').innerHTML = `<p><strong>Horóscopo (${sign}):</strong> ${data.description}</p>`;
             } catch (error) {
                 console.error('Erro ao buscar dados:', error);
                 document.getElementById('result').innerText = 'Ocorreu um erro ao buscar o horóscopo. Verifique sua conexão com a internet e tente novamente.';
