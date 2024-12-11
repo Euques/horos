@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórias Loucas de Bar - Euques</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .app-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .app-header {
+            text-align: center;
+            padding: 20px;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .app-main {
+            padding: 20px;
+        }
+
+        .story-container {
+            margin-bottom: 20px;
+        }
+
+        .story-container h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        blockquote {
+            font-size: 1.2rem;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-left: 5px solid #007bff;
+            margin: 0;
+            border-radius: 5px;
+        }
+
+        #story p {
+            margin: 10px 0;
+        }
+
+        #story strong {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Histórias Loucas de Bar</h1>
+        </header>
+
+        <main class="app-main">
+            <div class="story-container">
+                <h2>Uma história engraçada de "Loucos Bar":</h2>
+                <div id="story">
+                    <p>Era uma noite qualquer em um bar animado. O <strong>Euques</strong>, aquele ser todo "ele", estava sentado no balcão tomando sua cerveja, quando um grupo de amigos começou a provocá-lo. "Ei, Euques, quantas histórias você tem para contar?", provocou um deles, apontando para a caneca "Loucos Bar" em sua frente.</p>
+                    <p>"Ah, você não tem ideia!" - disse Euques, com um sorriso maroto. Ele pegou a caneca, escaneou o QR code e, de repente, apareceu uma história maluca na tela:</p>
+                    <blockquote>
+                        "Euques estava no bar quando, de repente, um saxofonista bêbado começou a tocar 'Despacito' na sua frente. Aí, ele, todo 'ele', decidiu entrar no ritmo e dançar sozinho, roubando a cena do pessoal no meio do salão. Como se isso não fosse suficiente, a música acabou e ele pegou o saxofone para tocar junto, mas estava tão bêbado que começou a tocar 'Trem das Onze' de Adoniran Barbosa em plena balada eletrônica. Uma confusão total!"
+                    </blockquote>
+                    <p>E lá estava Euques, rindo sozinho e deixando todos os outros à beira da mesa de tanto rir. Uma noite realmente louca e memorável!"</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Simulando a história aleatória
+            const stories = [
+                "Euques estava no bar quando, de repente, um saxofonista bêbado começou a tocar 'Despacito' na sua frente.",
+                "Uma noite, Euques tentou competir em um concurso de dança no meio do bar e acabou fazendo o moonwalk todo errado.",
+                "Em outra ocasião, ele pegou um microfone emprestado e começou a cantar 'Trem das Onze' de Adoniran Barbosa, totalmente fora de tom."
+            ];
+
+            // Sorteia uma história aleatória
+            const randomStory = stories[Math.floor(Math.random() * stories.length)];
+
+            // Aplica a história no HTML
+            document.getElementById('story').querySelector('blockquote').innerText = randomStory;
+        });
+    </script>
+</body>
+</html>
