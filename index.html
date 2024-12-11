@@ -35,13 +35,15 @@
         async function fetchHoroscope() {
             const sign = document.getElementById('sign').value;
 
-            // Nova API com HTTPS
+            // API com HTTPS que exige método POST
             const horoscopeUrl = `https://aztro.sameerkumar.website/?sign=${sign}&day=today`;
 
             try {
                 const response = await fetch(horoscopeUrl, {
-                    method: 'POST'
+                    method: 'POST', // API exige POST
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, // Header necessário
                 });
+
                 if (!response.ok) {
                     throw new Error('Erro ao buscar o horóscopo');
                 }
