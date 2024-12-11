@@ -9,17 +9,17 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: #f5f5f5;
             color: #000;
         }
 
         .app-container {
             max-width: 600px;
-            margin: 0 auto;
+            margin: 20px auto;
             padding: 20px;
-            background-color: #fff;
+            background-color: #ffffff;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .app-header {
@@ -31,24 +31,13 @@
             position: relative;
         }
 
-        img {
-
+        .app-header img {
             border-radius: 7px;
-            width: 100%; /* Ajuste a largura para 80% da largura da tela */
-            max-width: 150px; /* Limite a largura máxima da imagem */
-            height: auto; /* Mantém a proporção da imagem */
-            
-        }
-
-        .app-header {
-            width: 80%; /* Ajuste a largura para 80% da largura da tela */
-            max-width: 150px; /* Limite a largura máxima da imagem */
-            height: auto; /* Mantém a proporção da imagem */
-            
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
         }
 
         .app-main {
@@ -60,13 +49,14 @@
         }
 
         .story-container h2 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin-bottom: 10px;
+            text-align: center;
         }
 
         blockquote {
             font-size: 1.2rem;
-            padding: 15px;
+            padding: 20px;
             background-color: #e9ecef;
             border-left: 5px solid #e2c2a5;
             margin: 0;
@@ -74,7 +64,7 @@
         }
 
         #stories p {
-            margin: 10px 0;
+            margin: 15px 0;
         }
 
         #stories strong {
@@ -83,11 +73,9 @@
     </style>
 </head>
 <body>
-    <img src="locos.png" alt="Imagem Cabeçalho">
-    
     <div class="app-container">
         <header class="app-header">
-            
+            <img src="locos.png" alt="Imagem Cabeçalho">
             <h1>Histórias Loucas de Bar</h1>
         </header>
 
